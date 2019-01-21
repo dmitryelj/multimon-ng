@@ -2,6 +2,8 @@
  
 #define inline __inline 
 
+#define restrict __restrict
+
 #include "win32_getopt.h"
  
 #define strcasecmp(s1, s2) _stricmp(s1, s2)

@@ -37,7 +37,11 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#ifndef WINDOWS
 #include <getopt.h>
+#else
+#include "win32_getopt.h"
+#endif
 
 #ifdef SUN_AUDIO
 #include <sys/audioio.h>

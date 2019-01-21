@@ -18,7 +18,7 @@ set( PATCH "7" )
 set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra" )
 
 if( WIN32 )
-	add_definitions( "-DWIN32_AUDIO" "-DONLY_RAW" "-DWINDOWS" )
+	add_definitions( "-DWIN32_AUDIO" "-DONLY_RAW" "-DWINDOWS" "-D_USE_MATH_DEFINES" )
 	link_libraries( ${TARGET} "-lwinmm" )
 	set( SOURCES ${SOURCES}
 		"win32_soundin.c"

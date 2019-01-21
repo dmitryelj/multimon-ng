@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4BE48527-F546-38A6-A6F5-353199E17A78}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>multimon-ng</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\MyProjects\multimon-ng\win32\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">multimon-ng.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">multimon-ng</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\MyProjects\multimon-ng\win32\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">multimon-ng.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">multimon-ng</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\MyProjects\multimon-ng\win32\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">multimon-ng.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">multimon-ng</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\MyProjects\multimon-ng\win32\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">multimon-ng.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">multimon-ng</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32_AUDIO;ONLY_RAW;WINDOWS;_USE_MATH_DEFINES;NO_X11;DUMMY_AUDIO;MAX_VERBOSE_LEVEL=3;CHARSET_UTF8;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;WIN32_AUDIO;ONLY_RAW;WINDOWS;_USE_MATH_DEFINES;NO_X11;DUMMY_AUDIO;MAX_VERBOSE_LEVEL=3;CHARSET_UTF8;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>-lwinmm</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/MyProjects/multimon-ng/win32/Debug/multimon-ng.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/MyProjects/multimon-ng/win32/Debug/multimon-ng.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32_AUDIO;ONLY_RAW;WINDOWS;_USE_MATH_DEFINES;NO_X11;DUMMY_AUDIO;MAX_VERBOSE_LEVEL=3;CHARSET_UTF8;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;WIN32_AUDIO;ONLY_RAW;WINDOWS;_USE_MATH_DEFINES;NO_X11;DUMMY_AUDIO;MAX_VERBOSE_LEVEL=3;CHARSET_UTF8;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>-lwinmm</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/MyProjects/multimon-ng/win32/Release/multimon-ng.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/MyProjects/multimon-ng/win32/Release/multimon-ng.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) -Wextra</AdditionalOptions>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32_AUDIO;ONLY_RAW;WINDOWS;_USE_MATH_DEFINES;NO_X11;DUMMY_AUDIO;MAX_VERBOSE_LEVEL=3;CHARSET_UTF8;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;WIN32_AUDIO;ONLY_RAW;WINDOWS;_USE_MATH_DEFINES;NO_X11;DUMMY_AUDIO;MAX_VERBOSE_LEVEL=3;CHARSET_UTF8;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>-lwinmm;m.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/MyProjects/multimon-ng/win32/MinSizeRel/multimon-ng.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/MyProjects/multimon-ng/win32/MinSizeRel/multimon-ng.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) -Wextra</AdditionalOptions>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32_AUDIO;ONLY_RAW;WINDOWS;_USE_MATH_DEFINES;NO_X11;DUMMY_AUDIO;MAX_VERBOSE_LEVEL=3;CHARSET_UTF8;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;WIN32_AUDIO;ONLY_RAW;WINDOWS;_USE_MATH_DEFINES;NO_X11;DUMMY_AUDIO;MAX_VERBOSE_LEVEL=3;CHARSET_UTF8;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>-lwinmm;m.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/MyProjects/multimon-ng/win32/RelWithDebInfo/multimon-ng.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/MyProjects/multimon-ng/win32/RelWithDebInfo/multimon-ng.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="D:\MyProjects\multimon-ng\win32_soundin.c" />
+    <ClCompile Include="..\win32_getopt.c" />
+    <ClCompile Include="D:\MyProjects\multimon-ng\BCHCode.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\unixinput.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\uart.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\pocsag.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\selcall.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\hdlc.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_zvei1.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_zvei2.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_zvei3.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_pzvei.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_dzvei.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_ccir.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_eia.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_eea.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_ufsk12.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_poc24.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_poc12.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_poc5.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_hapn48.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_fsk96.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_dtmf.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_clipfsk.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_fmsfsk.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_afsk24.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_afsk24_3.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_afsk24_2.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_afsk12.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_flex.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\costabi.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\costabf.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\clip.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\fms.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_eas.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_morse.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_dumpcsv.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClCompile Include="D:\MyProjects\multimon-ng\demod_x10.c">
+      <FileType>CppCode</FileType>
+    </ClCompile>
+    <ClInclude Include="D:\MyProjects\multimon-ng\multimon.h" />
+    <ClInclude Include="D:\MyProjects\multimon-ng\gen.h" />
+    <ClInclude Include="D:\MyProjects\multimon-ng\filter.h" />
+    <ClInclude Include="D:\MyProjects\multimon-ng\filter-i386.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

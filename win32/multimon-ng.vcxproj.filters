@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="D:\MyProjects\multimon-ng\multimon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\MyProjects\multimon-ng\gen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\MyProjects\multimon-ng\filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\MyProjects\multimon-ng\filter-i386.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\MyProjects\multimon-ng\win32_soundin.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\BCHCode.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\unixinput.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\uart.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\pocsag.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\selcall.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\hdlc.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_zvei1.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_zvei2.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_zvei3.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_pzvei.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_dzvei.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_ccir.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_eia.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_eea.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_ufsk12.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_poc24.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_poc12.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_poc5.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_hapn48.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_fsk96.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_dtmf.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_clipfsk.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_fmsfsk.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_afsk24.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_afsk24_3.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_afsk24_2.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_afsk12.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_flex.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\costabi.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\costabf.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\clip.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\fms.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_eas.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_morse.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_dumpcsv.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\MyProjects\multimon-ng\demod_x10.c">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D85F4589-BB69-37AE-8D9A-780A74CDAC70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8CFBAE51-9D73-330E-9B69-313FF7CDC5FB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\win32_getopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
