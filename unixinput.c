@@ -68,7 +68,7 @@
 
 static const char *allowed_types[] = {
     "raw", "aiff", "au", "hcom", "sf", "voc", "cdr", "dat",
-    "smp", "wav", "maud", "vwe", "mp3", "mp4", "ogg", "flac", NULL
+    "smp", "wav", "maud", "vwe", "mp3", "mp4", "ogg", "flac", "cmd", NULL
 };
 
 /* ---------------------------------------------------------------------- */
@@ -439,8 +439,7 @@ static void input_sound(unsigned int sample_rate, unsigned int overlap,
 
 /* ---------------------------------------------------------------------- */
 
-static void input_file(unsigned int sample_rate, unsigned int overlap,
-                       const char *fname, const char *type)
+static void input_file(unsigned int sample_rate, unsigned int overlap, const char *fname, const char *type)
 {
     struct stat statbuf;
     int pipedes[2];
@@ -464,7 +463,7 @@ static void input_file(unsigned int sample_rate, unsigned int overlap,
     }
     else if (!type || !strcmp(type, "raw")) {
 #ifdef WINDOWS
-        if ((fd = open(fname, O_RDONLY | O_BINARY)) < 0) {
+        if ((fd = _open(fname, O_RDONLY | O_BINARY)) < 0) {
 #else
         if ((fd = open(fname, O_RDONLY)) < 0) {
 #endif
@@ -515,11 +514,12 @@ static void input_file(unsigned int sample_rate, unsigned int overlap,
      * demodulate
      */
     for (;;) {
-        i = read(fd, sp = buffer, sizeof(buffer));
+        i = _read(fd, sp = buffer, sizeof(buffer));
         if (i < 0 && errno != EAGAIN) {
             perror("read");
             exit(4);
         }
+
         if (!i)
             break;
         if (i > 0) {
@@ -541,12 +541,67 @@ static void input_file(unsigned int sample_rate, unsigned int overlap,
             }
         }
     }
-    close(fd);
+    _close(fd);
     
 #ifndef ONLY_RAW
     waitpid(pid, &soxstat, 0);
 #endif
 }
+
+static void input_cmd(unsigned int sample_rate, unsigned int overlap, const char *fpath, const char *type)
+{
+	struct stat statbuf;
+	int pipedes[2];
+	int pid = 0, soxstat;
+	FILE *fd;
+	int i;
+	short buffer[8192];
+	float fbuf[16384];
+	unsigned int fbuf_cnt = 0;
+	short *sp;
+
+	fd = _popen(fpath, "rb");
+
+	/*
+	 * if the input type is not raw, sox is started to convert the
+	 * samples to the requested format
+	 */
+
+	/*
+	 * demodulate
+	 */
+	for (;;) {
+		i = fread(buffer, 1, sizeof buffer, fd);
+		sp = buffer;
+		if (i < 0 && errno != EAGAIN) {
+			perror("read");
+			exit(4);
+		}
+
+		if (!i)
+			break;
+		if (i > 0) {
+			if (integer_only)
+			{
+				fbuf_cnt = i / sizeof(buffer[0]);
+			}
+			else
+			{
+				for (; (unsigned int)i >= sizeof(buffer[0]); i -= sizeof(buffer[0]), sp++)
+					fbuf[fbuf_cnt++] = (*sp) * (1.0f / 32768.0f);
+				if (i)
+					fprintf(stderr, "warning: noninteger number of samples read\n");
+			}
+			if (fbuf_cnt > overlap) {
+				process_buffer(fbuf, buffer, fbuf_cnt - overlap);
+				memmove(fbuf, fbuf + fbuf_cnt - overlap, overlap * sizeof(fbuf[0]));
+				fbuf_cnt = overlap;
+			}
+		}
+	}
+	_pclose(fd);
+}
+
 
 void quit(void)
 {
@@ -565,7 +620,10 @@ static const char usage_str[] = "\n"
         "Usage: %s [file] [file] [file] ...\n"
         "  If no [file] is given, input will be read from your default sound\n"
         "  hardware. A filename of \"-\" denotes standard input.\n"
-        "  -t <type>  : Input file type (any other type than raw requires sox)\n"
+		"  For windows only: pipe can be added via 'cmd' parameter:\n"
+		"  multimon-ng.exe -a POCSAG1200 -t cmd \"rtl_fm - s 22050 - f 172.45M - g 26 - p 0\" \n"
+		"  \n"
+		"  -t <type>  : Input file type (any other type than raw requires sox, 'cmd' is only for Windows version)\n"
         "  -a <demod> : Add demodulator\n"
         "  -s <demod> : Subtract demodulator\n"
         "  -c         : Remove all demodulators (must be added with -a <demod>)\n"
@@ -794,7 +852,8 @@ intypefound:
     fprintf(stderr, "multimon-ng 1.1.7\n"
         "  (C) 1996/1997 by Tom Sailer HB9JNX/AE4WA\n"
         "  (C) 2012-2019 by Elias Oenal\n"
-        "Available demodulators:");
+		"  Win32 build by Dmitrii Eliuseev\n"
+		"Available demodulators:");
     for (i = 0; (unsigned int) i < NUMDEMOD; i++) {
         fprintf(stderr, " %s", dem[i]->name);
     }
@@ -852,9 +911,16 @@ intypefound:
         (void)fprintf(stderr, "no source files specified\n");
         exit(4);
     }
-    
-    for (i = optind; i < argc; i++)
-        input_file(sample_rate, overlap, argv[i], input_type);
+
+	if (!strcmp(input_type, "cmd")) {
+		printf("Executing command: %s\r\n", argv[optind]);
+		input_cmd(sample_rate, overlap, argv[optind], input_type);
+	}
+	else {
+		for (i = optind; i < argc; i++) {
+			input_file(sample_rate, overlap, argv[i], input_type);
+		}
+	}
     
     quit();
     exit(0);
